@@ -1,0 +1,17 @@
+
+{
+  "equipements": [
+    {
+      "id": "CASQUE_VR_01",
+      "nom": "Casque VR",
+      "description": "Casque de réalité virtuelle",
+      "utilisation": "Immersion en 3D"
+    },
+    {
+      "id": "CAMERA_01",
+      "nom": "Caméra",
+      "description": "Caméra de capture vidéo",
+      "utilisation": "Reconnaissance de gestes"
+    }
+  ]
+}
