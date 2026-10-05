@@ -1,2 +1,9 @@
 Library/
 Library_old/
+Temp/
+Build/
+Builds/
+.vs/
+.vscode/
+*.csproj
+.DS_Store
