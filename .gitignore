@@ -1,0 +1,13 @@
+[Ll]ibrary/
+Library_old/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]serSettings/
+.vs/
+.idea/
+*.apk
+*.aab
+*.zip
