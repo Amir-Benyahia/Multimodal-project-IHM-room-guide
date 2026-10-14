@@ -13,6 +13,10 @@ extern void AffichageEquipement__ctor_m88BA2EBF5A7673E6C687DA333B2BD83EDD03A11E 
 extern void DetectionObjet_Start_m85F704FD7B50509ADA4CB8B9D48405F0C058FB73 (void);
 extern void DetectionObjet_Update_m9E25D054F02924F9BB4061ED1F97C32DD1542BFA (void);
 extern void DetectionObjet__ctor_mFACA5C4C9E2B57A92B304D334162EB3A511B8E37 (void);
+extern void FicheProjecteur_Start_m06C9EE5529554CC5E57E16A614C40ED0CE9D1B03 (void);
+extern void FicheProjecteur_OuvrirFiche_mF03531B60F6B09D956C9DD596D1521213A6C8FBB (void);
+extern void FicheProjecteur_FermerFiche_m6695D2B6FB710BF260EFBF94B83971C53FF4F625 (void);
+extern void FicheProjecteur__ctor_m1296A7F94A3FA20D0E5A7BF9298E988896560CD0 (void);
 extern void GestionEquipements_Awake_m569EDA0EC9BFE82A925432B26DB940083B0FF507 (void);
 extern void GestionEquipements_Rechercher_mA61F683E3240698CFC261093443A13EBD7BD2E99 (void);
 extern void GestionEquipements__ctor_m8E47D770E41DD0464D1953DA08B1C68599AE9C3D (void);
@@ -35,7 +39,7 @@ extern void Equipement__ctor_mEC295B320F7D73679306BBD163E33F0FEE71727A (void);
 extern void ListeEquipements__ctor_m719F94A527AC8B36E7E4CC0744D8907D6969C9DE (void);
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
-static Il2CppMethodPointer s_methodPointers[28] = 
+static Il2CppMethodPointer s_methodPointers[32] = 
 {
 	AffichageEquipement_Afficher_m68D5B95B9342C196201656797E6E5523E78800C9,
 	AffichageEquipement_Fermer_m06FD70450AB52275A87AE24B76F73FDB12A77F67,
@@ -43,6 +47,10 @@ static Il2CppMethodPointer s_methodPointers[28] =
 	DetectionObjet_Start_m85F704FD7B50509ADA4CB8B9D48405F0C058FB73,
 	DetectionObjet_Update_m9E25D054F02924F9BB4061ED1F97C32DD1542BFA,
 	DetectionObjet__ctor_mFACA5C4C9E2B57A92B304D334162EB3A511B8E37,
+	FicheProjecteur_Start_m06C9EE5529554CC5E57E16A614C40ED0CE9D1B03,
+	FicheProjecteur_OuvrirFiche_mF03531B60F6B09D956C9DD596D1521213A6C8FBB,
+	FicheProjecteur_FermerFiche_m6695D2B6FB710BF260EFBF94B83971C53FF4F625,
+	FicheProjecteur__ctor_m1296A7F94A3FA20D0E5A7BF9298E988896560CD0,
 	GestionEquipements_Awake_m569EDA0EC9BFE82A925432B26DB940083B0FF507,
 	GestionEquipements_Rechercher_mA61F683E3240698CFC261093443A13EBD7BD2E99,
 	GestionEquipements__ctor_m8E47D770E41DD0464D1953DA08B1C68599AE9C3D,
@@ -66,9 +74,13 @@ static Il2CppMethodPointer s_methodPointers[28] =
 	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
 	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
 };
-static const int32_t s_InvokerIndices[28] = 
+static const int32_t s_InvokerIndices[32] = 
 {
 	14868,
+	19342,
+	19342,
+	19342,
+	19342,
 	19342,
 	19342,
 	19342,
@@ -101,7 +113,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	28,
+	32,
 	s_methodPointers,
 	0,
 	NULL,

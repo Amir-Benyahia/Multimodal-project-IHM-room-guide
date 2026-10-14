@@ -11,11 +11,18 @@ public class ReconnaissanceIA : MonoBehaviour
     [Header("Affichage telephone")]
     public TMP_Text texteDetection;
 
+    [Header("Bouton details")]
+    public GameObject boutonDetails;
+
     private Model modele;
     private Worker worker;
 
     void Start()
     {
+        // Cacher le bouton au demarrage
+        if (boutonDetails != null)
+            boutonDetails.SetActive(false);
+
         if (modeleIA == null)
         {
             Debug.LogError("Aucun modele IA connecte !");
@@ -48,11 +55,6 @@ public class ReconnaissanceIA : MonoBehaviour
             {
                 float probabilite = resultat[0];
 
-                Debug.Log(
-                    "Score Projecteur Epson : " +
-                    (probabilite * 100f).ToString("F1") + "%"
-                );
-
                 if (probabilite > 0.9f)
                 {
                     if (texteDetection != null)
@@ -64,7 +66,9 @@ public class ReconnaissanceIA : MonoBehaviour
                         texteDetection.color = Color.green;
                     }
 
-                    Debug.Log("PROJECTEUR EPSON DETECTE !");
+                    // Afficher le bouton
+                    if (boutonDetails != null)
+                        boutonDetails.SetActive(true);
                 }
                 else
                 {
@@ -75,6 +79,10 @@ public class ReconnaissanceIA : MonoBehaviour
 
                         texteDetection.color = Color.white;
                     }
+
+                    // Cacher le bouton
+                    if (boutonDetails != null)
+                        boutonDetails.SetActive(false);
                 }
             }
         }

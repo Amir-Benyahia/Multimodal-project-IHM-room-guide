@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ScannerQR.cs" />
     <Compile Include="Assets\Scripts\DetectionObjet.cs" />
+    <Compile Include="Assets\Scripts\FicheProjecteur.cs" />
     <Compile Include="Assets\Scripts\ReconnaisanceIA.cs" />
     <Compile Include="Assets\Scripts\WebCamQR.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
