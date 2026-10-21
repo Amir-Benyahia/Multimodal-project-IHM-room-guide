@@ -161,7 +161,6 @@ IL2CPP_EXTERN_C RuntimeClass* XRCpuImage_t36F512AD65D5B0AA1CC458C3666873D741C60A
 IL2CPP_EXTERN_C String_t* _stringLiteral0977256BBF16E079E3949B65577CA8239547A424;
 IL2CPP_EXTERN_C String_t* _stringLiteral09EC77F322B53C8A0B1B21EC8F2163BCE9E9BD9E;
 IL2CPP_EXTERN_C String_t* _stringLiteral12C9B7E2E4569C9C90DC802A39F83277EBA9FE5B;
-IL2CPP_EXTERN_C String_t* _stringLiteral22D5A45150640A9248D6A47B8A7C130599C5D5FA;
 IL2CPP_EXTERN_C String_t* _stringLiteral425F545A256F9327EED516EA81D89B9BF89D788F;
 IL2CPP_EXTERN_C String_t* _stringLiteral51B2E8462D5BE8E1274A95D17528831D9C0EE3B8;
 IL2CPP_EXTERN_C String_t* _stringLiteral6213807FA8E07EF6BC1DF371D2B00AC114476B25;
@@ -179,6 +178,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralD1B1E1E6AFFC167EC3484825D92E65C904F50122
 IL2CPP_EXTERN_C String_t* _stringLiteralD4E75A51328CB7FA2332C63F8617609D410B08E8;
 IL2CPP_EXTERN_C String_t* _stringLiteralE3089E6A419FB6B32F084955E509C11CF5146DB2;
 IL2CPP_EXTERN_C String_t* _stringLiteralE5DA45181F0C29EDF313CF1590EF86AB0B1555A3;
+IL2CPP_EXTERN_C String_t* _stringLiteralFA2E4564B59FCE35FB8BE961DD9114F5DD61EA6E;
 IL2CPP_EXTERN_C String_t* _stringLiteralFE3E3DA1DBF9222669B8305B071072CA3928754D;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonUtility_FromJson_TisListeEquipements_t80EFA79557C42EAB90906FBE68DF8DF338D4DAE5_mD1D252CBEA7BD85EC58B622D28A7E7FF66DC006C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Find_mFB32373791DBCB3710846044495F7211AA83806F_RuntimeMethod_var;
@@ -1214,6 +1214,7 @@ struct ReconnaissanceIA_tD782E69189EC1AC327BEAE98B7C28349280586C9  : public Mono
 	ModelAsset_tF94288778F5363E27D250C5EC53BACABB6BBC789* ___modeleIA;
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___texteDetection;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___boutonDetails;
+	float ___seuilDetection;
 	Model_tA2D597686F5091B2507DCA498749D2AEC46BE29C* ___modele;
 	Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* ___worker;
 };
@@ -2493,7 +2494,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconnaissanceIA_Start_mE290FA11FF908179
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:23>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:27>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___boutonDetails;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -2504,7 +2505,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconnaissanceIA_Start_mE290FA11FF908179
 		}
 	}
 	{
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:24>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:28>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___boutonDetails;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
@@ -2512,7 +2513,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconnaissanceIA_Start_mE290FA11FF908179
 
 IL_001a:
 	{
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:26>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:30>
 		ModelAsset_tF94288778F5363E27D250C5EC53BACABB6BBC789* L_3 = __this->___modeleIA;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -2523,28 +2524,28 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:28>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:32>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralCCFA0A449D26DF3FF307AEE1280C1990A5E50CCF, NULL);
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:29>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:33>
 		return;
 	}
 
 IL_0033:
 	{
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:32>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:36>
 		ModelAsset_tF94288778F5363E27D250C5EC53BACABB6BBC789* L_5 = __this->___modeleIA;
 		Model_tA2D597686F5091B2507DCA498749D2AEC46BE29C* L_6;
 		L_6 = ModelLoader_Load_m093AD906726FB7134E59F11A398D9FFFFB83B8A0(L_5, NULL);
 		__this->___modele = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___modele), (void*)L_6);
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:33>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:37>
 		Model_tA2D597686F5091B2507DCA498749D2AEC46BE29C* L_7 = __this->___modele;
 		Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* L_8 = (Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5*)il2cpp_codegen_object_new(Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5_il2cpp_TypeInfo_var);
 		Worker__ctor_m2CE5716137202136C61497143401194308847B07(L_8, L_7, ((int32_t)512), NULL);
 		__this->___worker = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___worker), (void*)L_8);
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:35>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:39>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_9 = __this->___texteDetection;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -2555,7 +2556,7 @@ IL_0033:
 		}
 	}
 	{
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:36>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:40>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_11 = __this->___texteDetection;
 		NullCheck(L_11);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_11, _stringLiteralE5DA45181F0C29EDF313CF1590EF86AB0B1555A3);
@@ -2563,10 +2564,10 @@ IL_0033:
 
 IL_0078:
 	{
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:38>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:42>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralE3089E6A419FB6B32F084955E509C11CF5146DB2, NULL);
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:39>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:43>
 		return;
 	}
 }
@@ -2582,10 +2583,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconnaissanceIA_AnalyserImage_m5988A74C
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Tensor_1__ctor_m3939998527BC32D9233CBDF54948038625888C03_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral22D5A45150640A9248D6A47B8A7C130599C5D5FA);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6C066B34F4DB79023C0642AFBC43B25A5327F710);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral95F0DC023C38631C985E6BFA9DB7FD00EB312BF3);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC613D4D2FE3F5D74727D376F793286A2BCBB1391);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFA2E4564B59FCE35FB8BE961DD9114F5DD61EA6E);
 		s_Il2CppMethodInitialized = true;
 	}
 	Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* V_0 = NULL;
@@ -2593,7 +2594,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconnaissanceIA_AnalyserImage_m5988A74C
 	float V_2 = 0.0f;
 	float V_3 = 0.0f;
 	{
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:43>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:47>
 		Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* L_0 = __this->___worker;
 		if (L_0)
 		{
@@ -2601,15 +2602,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconnaissanceIA_AnalyserImage_m5988A74C
 		}
 	}
 	{
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:44>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:48>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:46>
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:47>
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:48>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:50>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:51>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:52>
 		TensorShape_t262F74805ED00A4B71BBAE6C0766049D944ACE34 L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		TensorShape__ctor_mE6529014F06216A487E96933BFBA155C1FAF4FEE((&L_1), 1, ((int32_t)224), ((int32_t)224), 3, NULL);
@@ -2622,13 +2623,13 @@ IL_0009:
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0110:
+FINALLY_012f:
 			{
 				{
 					Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_4 = V_0;
 					if (!L_4)
 					{
-						goto IL_0119;
+						goto IL_0138;
 					}
 				}
 				{
@@ -2637,7 +2638,7 @@ FINALLY_0110:
 					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_5);
 				}
 
-IL_0119:
+IL_0138:
 				{
 					return;
 				}
@@ -2646,17 +2647,17 @@ IL_0119:
 		try
 		{
 			{
-				//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:50>
+				//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:54>
 				Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* L_6 = __this->___worker;
 				Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_7 = V_0;
 				NullCheck(L_6);
 				Worker_Schedule_mB1327ED170CCCD298B9FC790A922947AE8E8D6CD(L_6, L_7, NULL);
-				//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:52>
+				//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:56>
 				Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* L_8 = __this->___worker;
 				NullCheck(L_8);
 				Tensor_t605E6A43129BE2702B0B01D58A3AE82242D41B2C* L_9;
 				L_9 = Worker_PeekOutput_mF78FAD0CBB18AE0B7410F524C8B49A757DA1E7EE(L_8, NULL);
-				//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:54>
+				//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:58>
 				NullCheck(((Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4*)IsInstClass((RuntimeObject*)L_9, Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var)));
 				Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_10;
 				L_10 = Tensor_1_ReadbackAndClone_m94DDCE51E7C12C75F71D7E022BD3729968EC0120(((Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4*)IsInstClass((RuntimeObject*)L_9, Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var)), Tensor_1_ReadbackAndClone_m94DDCE51E7C12C75F71D7E022BD3729968EC0120_RuntimeMethod_var);
@@ -2666,13 +2667,13 @@ IL_0119:
 				auto __finallyBlock = il2cpp::utils::Finally([&]
 				{
 
-FINALLY_0106_1:
+FINALLY_0125_1:
 					{
 						{
 							Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_11 = V_1;
 							if (!L_11)
 							{
-								goto IL_010f_1;
+								goto IL_012e_1;
 							}
 						}
 						{
@@ -2681,7 +2682,7 @@ FINALLY_0106_1:
 							InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_12);
 						}
 
-IL_010f_1:
+IL_012e_1:
 						{
 							return;
 						}
@@ -2690,120 +2691,128 @@ IL_010f_1:
 				try
 				{
 					{
-						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:56>
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:60>
 						Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_13 = V_1;
 						NullCheck(L_13);
 						float L_14;
 						L_14 = Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D(L_13, 0, Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D_RuntimeMethod_var);
 						V_2 = L_14;
-						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:58>
-						float L_15 = V_2;
-						if ((!(((float)L_15) > ((float)(0.899999976f)))))
-						{
-							goto IL_00bc_2;
-						}
-					}
-					{
-						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:60>
-						TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_16 = __this->___texteDetection;
-						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-						bool L_17;
-						L_17 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_16, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-						if (!L_17)
-						{
-							goto IL_00a0_2;
-						}
-					}
-					{
 						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:62>
-						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:63>
-						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:64>
-						TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_18 = __this->___texteDetection;
-						float L_19 = V_2;
-						V_3 = ((float)il2cpp_codegen_multiply(L_19, (100.0f)));
-						String_t* L_20;
-						L_20 = Single_ToString_m3F2C4433B6ADFA5ED8E3F14ED19CD23014E5179D((&V_3), _stringLiteralC613D4D2FE3F5D74727D376F793286A2BCBB1391, NULL);
-						String_t* L_21;
-						L_21 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral95F0DC023C38631C985E6BFA9DB7FD00EB312BF3, L_20, _stringLiteral6C066B34F4DB79023C0642AFBC43B25A5327F710, NULL);
-						NullCheck(L_18);
-						VirtualActionInvoker1< String_t* >::Invoke(66, L_18, L_21);
-						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:66>
-						TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_22 = __this->___texteDetection;
-						Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_23;
-						L_23 = Color_get_green_mEB001F2CD8C68C6BBAEF9101990B779D3AA2A6EF_inline(NULL);
-						NullCheck(L_22);
-						VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_22, L_23);
-					}
-
-IL_00a0_2:
-					{
-						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:70>
-						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_24 = __this->___boutonDetails;
-						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-						bool L_25;
-						L_25 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_24, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-						if (!L_25)
+						float L_15 = V_2;
+						float L_16 = __this->___seuilDetection;
+						if ((!(((float)L_15) >= ((float)L_16))))
 						{
-							goto IL_0104_2;
+							goto IL_00bd_2;
 						}
 					}
 					{
-						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:71>
-						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_26 = __this->___boutonDetails;
-						NullCheck(L_26);
-						GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_26, (bool)1, NULL);
-						goto IL_011a;
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:64>
+						TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_17 = __this->___texteDetection;
+						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+						bool L_18;
+						L_18 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_17, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+						if (!L_18)
+						{
+							goto IL_00a1_2;
+						}
+					}
+					{
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:66>
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:67>
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:68>
+						TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_19 = __this->___texteDetection;
+						float L_20 = V_2;
+						V_3 = ((float)il2cpp_codegen_multiply(L_20, (100.0f)));
+						String_t* L_21;
+						L_21 = Single_ToString_m3F2C4433B6ADFA5ED8E3F14ED19CD23014E5179D((&V_3), _stringLiteralC613D4D2FE3F5D74727D376F793286A2BCBB1391, NULL);
+						String_t* L_22;
+						L_22 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral95F0DC023C38631C985E6BFA9DB7FD00EB312BF3, L_21, _stringLiteral6C066B34F4DB79023C0642AFBC43B25A5327F710, NULL);
+						NullCheck(L_19);
+						VirtualActionInvoker1< String_t* >::Invoke(66, L_19, L_22);
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:70>
+						TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_23 = __this->___texteDetection;
+						Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_24;
+						L_24 = Color_get_green_mEB001F2CD8C68C6BBAEF9101990B779D3AA2A6EF_inline(NULL);
+						NullCheck(L_23);
+						VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_23, L_24);
 					}
 
-IL_00bc_2:
+IL_00a1_2:
+					{
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:74>
+						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_25 = __this->___boutonDetails;
+						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+						bool L_26;
+						L_26 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_25, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+						if (!L_26)
+						{
+							goto IL_0123_2;
+						}
+					}
 					{
 						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:75>
-						TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_27 = __this->___texteDetection;
+						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27 = __this->___boutonDetails;
+						NullCheck(L_27);
+						GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_27, (bool)1, NULL);
+						goto IL_0139;
+					}
+
+IL_00bd_2:
+					{
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:79>
+						TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_28 = __this->___texteDetection;
 						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-						bool L_28;
-						L_28 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_27, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-						if (!L_28)
+						bool L_29;
+						L_29 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_28, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+						if (!L_29)
 						{
-							goto IL_00ea_2;
+							goto IL_0109_2;
 						}
 					}
 					{
-						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:77>
-						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:78>
-						TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_29 = __this->___texteDetection;
-						NullCheck(L_29);
-						VirtualActionInvoker1< String_t* >::Invoke(66, L_29, _stringLiteral22D5A45150640A9248D6A47B8A7C130599C5D5FA);
-						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:80>
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:81>
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:82>
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:83>
 						TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_30 = __this->___texteDetection;
-						Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_31;
-						L_31 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
+						float L_31 = V_2;
+						V_3 = ((float)il2cpp_codegen_multiply(L_31, (100.0f)));
+						String_t* L_32;
+						L_32 = Single_ToString_m3F2C4433B6ADFA5ED8E3F14ED19CD23014E5179D((&V_3), _stringLiteralC613D4D2FE3F5D74727D376F793286A2BCBB1391, NULL);
+						String_t* L_33;
+						L_33 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralFA2E4564B59FCE35FB8BE961DD9114F5DD61EA6E, L_32, _stringLiteral6C066B34F4DB79023C0642AFBC43B25A5327F710, NULL);
 						NullCheck(L_30);
-						VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_30, L_31);
+						VirtualActionInvoker1< String_t* >::Invoke(66, L_30, L_33);
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:85>
+						TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_34 = __this->___texteDetection;
+						Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_35;
+						L_35 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
+						NullCheck(L_34);
+						VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_34, L_35);
 					}
 
-IL_00ea_2:
+IL_0109_2:
 					{
-						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:84>
-						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32 = __this->___boutonDetails;
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:89>
+						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_36 = __this->___boutonDetails;
 						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-						bool L_33;
-						L_33 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_32, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-						if (!L_33)
+						bool L_37;
+						L_37 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_36, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+						if (!L_37)
 						{
-							goto IL_0104_2;
+							goto IL_0123_2;
 						}
 					}
 					{
-						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:85>
-						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_34 = __this->___boutonDetails;
-						NullCheck(L_34);
-						GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_34, (bool)0, NULL);
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:90>
+						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_38 = __this->___boutonDetails;
+						NullCheck(L_38);
+						GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_38, (bool)0, NULL);
 					}
 
-IL_0104_2:
+IL_0123_2:
 					{
-						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:87>
-						goto IL_011a;
+						//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:92>
+						goto IL_0139;
 					}
 				}
 				catch(Il2CppExceptionWrapper& e)
@@ -2818,9 +2827,9 @@ IL_0104_2:
 		}
 	}
 
-IL_011a:
+IL_0139:
 	{
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:89>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:94>
 		return;
 	}
 }
@@ -2830,7 +2839,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconnaissanceIA_OnDestroy_mB697479F1A72
 	Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* G_B2_0 = NULL;
 	Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* G_B1_0 = NULL;
 	{
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:93>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:98>
 		Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* L_0 = __this->___worker;
 		Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* L_1 = L_0;
 		if (L_1)
@@ -2848,15 +2857,16 @@ IL_000b:
 	{
 		NullCheck(G_B2_0);
 		Worker_Dispose_m1681D054781AB36D3515E77674026D29D4594829(G_B2_0, NULL);
-		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:94>
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:99>
 		return;
 	}
 }
 // Method Definition Index: 119948
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconnaissanceIA__ctor_m08166C0627BCD8B70645812170D09AFE013A6413 (ReconnaissanceIA_tD782E69189EC1AC327BEAE98B7C28349280586C9* __this, const RuntimeMethod* method) 
 {
-	//<source_info:<no-source>:1>
 	{
+		//<source_info:D:/Salle IHM_sauvegarde/Assets/Scripts/ReconnaisanceIA.cs:19>
+		__this->___seuilDetection = (0.75f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}

@@ -23633,6 +23633,7 @@ struct ReconnaissanceIA_tD782E69189EC1AC327BEAE98B7C28349280586C9  : public Mono
 	ModelAsset_tF94288778F5363E27D250C5EC53BACABB6BBC789* ___modeleIA;
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___texteDetection;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___boutonDetails;
+	float ___seuilDetection;
 	Model_tA2D597686F5091B2507DCA498749D2AEC46BE29C* ___modele;
 	Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* ___worker;
 };
@@ -32239,9 +32240,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable14548[1] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable14549[2] = 
 {
 	static_cast<int32_t>(offsetof(GestionEquipements_t217703C3464C0BCC0711208671FD4BCCF18375C6, ___fichierJSON)),static_cast<int32_t>(offsetof(GestionEquipements_t217703C3464C0BCC0711208671FD4BCCF18375C6, ___baseDonnees)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable14550[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable14550[6] = 
 {
-	static_cast<int32_t>(offsetof(ReconnaissanceIA_tD782E69189EC1AC327BEAE98B7C28349280586C9, ___modeleIA)),static_cast<int32_t>(offsetof(ReconnaissanceIA_tD782E69189EC1AC327BEAE98B7C28349280586C9, ___texteDetection)),static_cast<int32_t>(offsetof(ReconnaissanceIA_tD782E69189EC1AC327BEAE98B7C28349280586C9, ___boutonDetails)),static_cast<int32_t>(offsetof(ReconnaissanceIA_tD782E69189EC1AC327BEAE98B7C28349280586C9, ___modele)),static_cast<int32_t>(offsetof(ReconnaissanceIA_tD782E69189EC1AC327BEAE98B7C28349280586C9, ___worker)),};
+	static_cast<int32_t>(offsetof(ReconnaissanceIA_tD782E69189EC1AC327BEAE98B7C28349280586C9, ___modeleIA)),static_cast<int32_t>(offsetof(ReconnaissanceIA_tD782E69189EC1AC327BEAE98B7C28349280586C9, ___texteDetection)),static_cast<int32_t>(offsetof(ReconnaissanceIA_tD782E69189EC1AC327BEAE98B7C28349280586C9, ___boutonDetails)),static_cast<int32_t>(offsetof(ReconnaissanceIA_tD782E69189EC1AC327BEAE98B7C28349280586C9, ___seuilDetection)),static_cast<int32_t>(offsetof(ReconnaissanceIA_tD782E69189EC1AC327BEAE98B7C28349280586C9, ___modele)),static_cast<int32_t>(offsetof(ReconnaissanceIA_tD782E69189EC1AC327BEAE98B7C28349280586C9, ___worker)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable14551[2] = 
 {
 	static_cast<int32_t>(offsetof(ScannerQR_tA5C3C081714A143CFB6FE3F011C5A082930D1D03, ___gestion)),static_cast<int32_t>(offsetof(ScannerQR_tA5C3C081714A143CFB6FE3F011C5A082930D1D03, ___affichage)),};

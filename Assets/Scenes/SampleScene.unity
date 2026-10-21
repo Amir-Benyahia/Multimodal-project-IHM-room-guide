@@ -2961,9 +2961,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0743c3dbef4f5a242a68597bb0d11297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ReconnaissanceIA
-  modeleIA: {fileID: 5022602860645237092, guid: 0e72f845dc461b54a879ee8bfd1107f8, type: 3}
+  modeleIA: {fileID: 5022602860645237092, guid: 9c6a31f5ecd3bc64aac23a622befb6df, type: 3}
   texteDetection: {fileID: 850545961}
   boutonDetails: {fileID: 680431280}
+  seuilDetection: 0.75
 --- !u!1001 &3081540728181012793
 PrefabInstance:
   m_ObjectHideFlags: 0

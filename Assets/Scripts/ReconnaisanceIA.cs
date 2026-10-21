@@ -14,6 +14,10 @@ public class ReconnaissanceIA : MonoBehaviour
     [Header("Bouton details")]
     public GameObject boutonDetails;
 
+    [Header("Seuil de detection")]
+    [Range(0f, 1f)]
+    public float seuilDetection = 0.75f;
+
     private Model modele;
     private Worker worker;
 
@@ -55,7 +59,7 @@ public class ReconnaissanceIA : MonoBehaviour
             {
                 float probabilite = resultat[0];
 
-                if (probabilite > 0.9f)
+                if (probabilite >= seuilDetection)
                 {
                     if (texteDetection != null)
                     {
@@ -75,7 +79,8 @@ public class ReconnaissanceIA : MonoBehaviour
                     if (texteDetection != null)
                     {
                         texteDetection.text =
-                            "Projecteur non reconnu";
+                            "Projecteur non reconnu\n" +
+                            (probabilite * 100f).ToString("F1") + "%";
 
                         texteDetection.color = Color.white;
                     }
