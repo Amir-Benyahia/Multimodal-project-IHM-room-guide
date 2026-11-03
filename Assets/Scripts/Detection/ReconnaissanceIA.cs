@@ -18,14 +18,26 @@ public class ReconnaissanceIA : MonoBehaviour
     [Range(0f, 1f)]
     public float seuilDetection = 0.75f;
 
+    [Header("Dialogue vocal (trouve automatiquement si vide)")]
+    public GestionnaireDialogue dialogue;
+    public string idEquipement = "PROJECTEUR_EPSON_01";
+
     private Model modele;
     private Worker worker;
+
+    // Une fois l'interface 3D posee sur le projecteur, elle remplace ce texte
+    private InterfaceAR3D interfaceAR;
 
     void Start()
     {
         // Cacher le bouton au demarrage
         if (boutonDetails != null)
             boutonDetails.SetActive(false);
+
+        if (dialogue == null)
+            dialogue = FindFirstObjectByType<GestionnaireDialogue>();
+
+        interfaceAR = FindFirstObjectByType<InterfaceAR3D>();
 
         if (modeleIA == null)
         {
@@ -59,6 +71,9 @@ public class ReconnaissanceIA : MonoBehaviour
             {
                 float probabilite = resultat[0];
 
+                if (texteDetection != null)
+                    texteDetection.gameObject.SetActive(interfaceAR == null || !interfaceAR.EstPlace);
+
                 if (probabilite >= seuilDetection)
                 {
                     if (texteDetection != null)
@@ -73,6 +88,10 @@ public class ReconnaissanceIA : MonoBehaviour
                     // Afficher le bouton
                     if (boutonDetails != null)
                         boutonDetails.SetActive(true);
+
+                    // Prevenir le dialogue : c'est l'objet dont on parle
+                    if (dialogue != null)
+                        dialogue.ObjetDetecte(idEquipement);
                 }
                 else
                 {

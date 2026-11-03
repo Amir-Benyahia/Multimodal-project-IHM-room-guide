@@ -38,6 +38,9 @@ public class GestionEquipements : MonoBehaviour
         }
     }
 
+    // La salle (reponses et reperes du mur), ou null si absente du JSON
+    public Salle Salle => baseDonnees != null ? baseDonnees.salle : null;
+
     public Equipement Rechercher(string id)
     {
         if (baseDonnees == null ||

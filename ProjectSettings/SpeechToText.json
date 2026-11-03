@@ -1,0 +1,5 @@
+{
+    "AutomatedSetup": true,
+    "SpeechRecognitionUsageDescription": "La reconnaissance vocale permet de poser vos questions sur les équipements à l'oral.",
+    "MicrophoneUsageDescription": "Le micro sert à écouter vos questions sur les équipements."
+}

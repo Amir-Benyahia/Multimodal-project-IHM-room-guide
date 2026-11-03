@@ -1,4 +1,3 @@
-
 {
   "equipements": [
     {
@@ -12,6 +11,289 @@
       "nom": "Caméra",
       "description": "Caméra de capture vidéo",
       "utilisation": "Reconnaissance de gestes"
+    },
+    {
+      "id": "PROJECTEUR_EPSON_01",
+      "nom": "Vidéoprojecteur Epson EB-575W",
+      "description": "Vidéoprojecteur à ultra-courte focale de la salle IHM.",
+      "utilisation": "Projeter des cours, des présentations et des contenus multimédia sur l'écran ou le tableau.",
+      "reponses": [
+        {
+          "intention": "ALLUMER",
+          "texte": "Appuyez sur le bouton Power de la télécommande ou du projecteur. Il faut environ trente secondes pour que l'image apparaisse. Pour l'éteindre, appuyez deux fois sur Power.",
+          "variantes": [
+            "Le bouton Power est sur le dessus du projecteur, et aussi sur la télécommande. Un appui suffit, puis patientez une trentaine de secondes.",
+            "Un appui sur Power, et c'est parti. L'image met environ trente secondes à arriver."
+          ]
+        },
+        {
+          "intention": "BRANCHER",
+          "texte": "Branchez votre ordinateur avec le câble HDMI, puis appuyez sur Source Search pour que le projecteur trouve l'image.",
+          "variantes": [
+            "Reliez votre ordinateur au projecteur avec le câble HDMI. Si l'image n'arrive pas, appuyez sur Source Search.",
+            "Câble HDMI dans votre ordinateur, puis Source Search. Sur un Mac, pensez à l'adaptateur."
+          ]
+        },
+        {
+          "intention": "TELECOMMANDE",
+          "texte": "La télécommande sert à allumer le projecteur avec le bouton Power, à changer de source avec Source Search et à couper l'image avec A/V Mute.",
+          "variantes": [
+            "Sur la télécommande, les boutons utiles sont Power pour allumer, Source Search pour trouver l'ordinateur, et A/V Mute pour cacher l'image.",
+            "Power, Source Search et A/V Mute : ce sont les trois boutons à retenir sur la télécommande."
+          ]
+        },
+        {
+          "intention": "PROBLEME",
+          "texte": "Si rien ne s'affiche, vérifiez que le câble HDMI est bien branché, appuyez sur Source Search, et vérifiez que le bouton A/V Mute n'est pas activé.",
+          "variantes": [
+            "Commençons par le câble HDMI : est-il bien branché des deux côtés ? Ensuite, essayez Source Search, et vérifiez que A/V Mute est désactivé.",
+            "Dites-moi ce qui ne va pas : pas d'image, pas de son, ou il ne s'allume pas ? Je vous guiderai."
+          ]
+        },
+        {
+          "intention": "CARACTERISTIQUES",
+          "texte": "C'est un Epson EB-575W à ultra-courte focale. Sa résolution est de 1280 par 800 pixels et sa luminosité de 2700 lumens.",
+          "variantes": [
+            "Résolution 1280 par 800, luminosité 2700 lumens, et une ultra-courte focale : il projette une grande image en étant très près du mur.",
+            "C'est un Epson EB-575W : 2700 lumens et 1280 par 800 pixels."
+          ]
+        },
+        {
+          "intention": "UTILISER",
+          "texte": "Pour l'utiliser : appuyez sur Power et attendez environ trente secondes. Branchez votre ordinateur avec le câble HDMI, puis appuyez sur Source Search. À la fin, appuyez deux fois sur Power pour l'éteindre.",
+          "variantes": [
+            "Allumez-le avec Power, branchez votre ordinateur en HDMI, puis appuyez sur Source Search.",
+            "Dites guide, et je vous accompagne étape par étape."
+          ]
+        },
+        {
+          "intention": "ETEINDRE",
+          "texte": "Appuyez sur Power, puis une deuxième fois pour confirmer. Attendez que le voyant arrête de clignoter avant de débrancher le projecteur.",
+          "variantes": [
+            "Deux appuis sur Power l'éteignent. Laissez-le refroidir avant de le débrancher.",
+            "Power, puis Power encore une fois pour confirmer."
+          ]
+        },
+        {
+          "intention": "SON",
+          "texte": "Le son passe par le haut-parleur du projecteur. Réglez-le avec les boutons Volume de la télécommande, et vérifiez aussi le volume de votre ordinateur.",
+          "variantes": [
+            "Le volume se règle avec les boutons Volume de la télécommande. Pensez aussi à monter le son de votre ordinateur.",
+            "Boutons Volume sur la télécommande, et volume de l'ordinateur."
+          ]
+        },
+        {
+          "intention": "NETTETE",
+          "texte": "Si l'image est floue, faites glisser doucement le levier de mise au point du projecteur jusqu'à ce que le texte soit net.",
+          "variantes": [
+            "Pour une image nette, déplacez doucement le levier de mise au point, en regardant le texte projeté.",
+            "Image floue ? Le levier de mise au point, près de l'objectif, règle la netteté."
+          ]
+        },
+        {
+          "intention": "TAILLE_IMAGE",
+          "texte": "C'est un projecteur à ultra-courte focale : la taille de l'image dépend de sa distance au tableau. Sans le déplacer, vous pouvez utiliser le bouton E-Zoom de la télécommande, ou corriger la forme de l'image dans le menu.",
+          "variantes": [
+            "Pour une image plus grande, il faudrait éloigner le projecteur du tableau. Sinon, le bouton E-Zoom de la télécommande agrandit une partie de l'image.",
+            "La taille dépend de la distance au tableau. E-Zoom sur la télécommande peut aider."
+          ]
+        },
+        {
+          "intention": "COUPER_IMAGE",
+          "texte": "Appuyez sur A/V Mute sur la télécommande pour cacher l'image et couper le son, et appuyez à nouveau pour les retrouver. Le bouton Freeze fige l'image.",
+          "variantes": [
+            "A/V Mute cache l'image et coupe le son, un nouvel appui les fait revenir. Freeze fige l'image.",
+            "Pour cacher l'image un instant : A/V Mute sur la télécommande."
+          ]
+        },
+        {
+          "intention": "PAS_ALLUME",
+          "texte": "Vérifiez que le câble d'alimentation est bien branché et que la prise est allumée, puis appuyez sur Power. Si un voyant clignote en orange ou en rouge, le projecteur refroidit : attendez quelques minutes.",
+          "variantes": [
+            "D'abord, la prise : le câble d'alimentation est-il bien branché ? Ensuite, appuyez sur Power. Un voyant orange ou rouge veut dire qu'il refroidit.",
+            "Vérifiez l'alimentation, puis appuyez sur Power. S'il clignote orange, patientez quelques minutes."
+          ]
+        },
+        {
+          "intention": "PAS_IMAGE",
+          "texte": "Vérifiez que le câble HDMI est bien branché des deux côtés, puis appuyez sur Source Search. Vérifiez aussi que A/V Mute n'est pas activé. Sur un Mac, il faut parfois un adaptateur HDMI.",
+          "variantes": [
+            "Pas d'image ? Vérifiez le câble HDMI, appuyez sur Source Search, et désactivez A/V Mute si besoin.",
+            "Essayez Source Search. Si rien ne change, rebranchez le câble HDMI."
+          ]
+        },
+        {
+          "intention": "PAS_SON",
+          "texte": "Vérifiez que le volume n'est pas au minimum sur la télécommande et que A/V Mute n'est pas activé. Sur votre ordinateur, choisissez le projecteur comme sortie audio.",
+          "variantes": [
+            "Pas de son ? Montez le volume sur la télécommande, désactivez A/V Mute, et choisissez le projecteur comme sortie audio sur l'ordinateur.",
+            "Vérifiez le volume de la télécommande et la sortie audio de votre ordinateur."
+          ]
+        }
+      ],
+      "guide": [
+        {
+          "titre": "Allumer",
+          "texte": "Appuyez sur le bouton Power, sur le projecteur ou sur la télécommande. Attendez environ trente secondes que l'image apparaisse.",
+          "repere": "POWER"
+        },
+        {
+          "titre": "Brancher l'ordinateur",
+          "texte": "Branchez le câble HDMI entre votre ordinateur et le projecteur. Sur un Mac, il faut parfois un adaptateur.",
+          "repere": "HDMI"
+        },
+        {
+          "titre": "Choisir la source",
+          "texte": "Appuyez sur Source Search pour que le projecteur trouve l'image de votre ordinateur.",
+          "repere": "SOURCE"
+        },
+        {
+          "titre": "Régler la netteté",
+          "texte": "Si l'image est floue, faites glisser doucement le levier de mise au point jusqu'à ce que le texte soit net.",
+          "repere": "OBJECTIF"
+        },
+        {
+          "titre": "C'est prêt",
+          "texte": "Votre image est prête. Pour la cacher un moment, appuyez sur A/V Mute. À la fin, appuyez deux fois sur Power pour éteindre.",
+          "repere": ""
+        }
+      ]
     }
-  ]
+  ],
+  "salle": {
+    "nom": "Salle 111 · Bât. E",
+    "sousTitre": "Salle IHM",
+    "hauteurProjecteur": 2.4,
+    "panneauX": -0.9,
+    "panneauY": 2.3,
+    "reponses": [
+      {
+        "intention": "SORTIE",
+        "texte": "La sortie, c'est la porte bleue à droite du tableau blanc. Suivez la flèche verte.",
+        "variantes": [
+          "Pour sortir, prenez la porte bleue tout à droite. Le chemin vert au sol vous y mène.",
+          "C'est la porte de droite, après le tableau blanc. Je l'entoure en vert."
+        ]
+      },
+      {
+        "intention": "ZONE_IMAGE",
+        "texte": "L'image s'affiche sur le mur, derrière l'écran noir et le tableau blanc. Écartez-les pour voir toute l'image.",
+        "variantes": [
+          "Le projecteur affiche l'image sur le mur, juste en dessous de lui. Pensez à pousser le tableau blanc sur le côté.",
+          "Sur le mur, sous le projecteur. Ne restez pas collé au mur, sinon vous faites de l'ombre sur l'image."
+        ]
+      },
+      {
+        "intention": "LUMIERE",
+        "texte": "L'interrupteur est à gauche de la porte de sortie. Baissez un peu la lumière pour mieux voir l'image.",
+        "variantes": [
+          "Les lumières se règlent à côté de la porte de droite. Je vous montre l'interrupteur.",
+          "Regardez à gauche de la porte de sortie : c'est l'interrupteur. Il y en a aussi un près des fenêtres."
+        ]
+      },
+      {
+        "intention": "SECURITE",
+        "texte": "L'extincteur est par terre, à côté de la porte de gauche. En cas d'urgence, sortez par la porte de droite.",
+        "variantes": [
+          "En cas de feu : l'extincteur est près de la porte de gauche, et la sortie est la porte bleue de droite.",
+          "L'extincteur est en bas, à côté de la porte de gauche. Je vous montre aussi le chemin vers la sortie."
+        ]
+      },
+      {
+        "intention": "SALLE",
+        "texte": "Vous êtes dans la salle 111 du bâtiment E.",
+        "variantes": [
+          "C'est la salle 111, au bâtiment E.",
+          "Salle 111, bâtiment E. Le nom est affiché sur le mur, à gauche du projecteur."
+        ]
+      },
+      {
+        "intention": "REPERES",
+        "texte": "Voici les repères de la salle : l'interrupteur, l'extincteur, l'écran tactile, le tableau blanc et la prise du projecteur.",
+        "variantes": [
+          "Je vous montre ce qu'il y a autour du projecteur. Vous pouvez aussi demander : où est la sortie ?",
+          "Regardez le mur : chaque repère a son étiquette. Demandez par exemple : où sont les lumières ?"
+        ]
+      }
+    ],
+    "reperes": [
+      {
+        "id": "SORTIE",
+        "libelle": "Sortie",
+        "x": 2.4,
+        "y": 1.05,
+        "largeur": 0.9,
+        "hauteur": 2.1,
+        "avance": 0.0,
+        "couleur": "",
+        "intention": ""
+      },
+      {
+        "id": "INTERRUPTEUR",
+        "libelle": "Interrupteur",
+        "x": 1.75,
+        "y": 1.1,
+        "largeur": 0.08,
+        "hauteur": 0.12,
+        "avance": 0.0,
+        "couleur": "",
+        "intention": "LUMIERE"
+      },
+      {
+        "id": "EXTINCTEUR",
+        "libelle": "Extincteur",
+        "x": -2.05,
+        "y": 0.3,
+        "largeur": 0.25,
+        "hauteur": 0.6,
+        "avance": 0.1,
+        "couleur": "orange",
+        "intention": "SECURITE"
+      },
+      {
+        "id": "IMAGE",
+        "libelle": "Image projetée",
+        "x": 0.0,
+        "y": 1.5,
+        "largeur": 1.75,
+        "hauteur": 1.1,
+        "avance": 0.0,
+        "couleur": "",
+        "intention": ""
+      },
+      {
+        "id": "ECRAN",
+        "libelle": "Écran tactile",
+        "x": -0.45,
+        "y": 1.3,
+        "largeur": 1.25,
+        "hauteur": 0.75,
+        "avance": 0.5,
+        "couleur": "",
+        "intention": ""
+      },
+      {
+        "id": "TABLEAU",
+        "libelle": "Tableau blanc",
+        "x": 0.95,
+        "y": 1.3,
+        "largeur": 1.2,
+        "hauteur": 0.9,
+        "avance": 0.4,
+        "couleur": "",
+        "intention": ""
+      },
+      {
+        "id": "PRISE",
+        "libelle": "Prise du projecteur",
+        "x": 0.55,
+        "y": 2.3,
+        "largeur": 0.08,
+        "hauteur": 0.08,
+        "avance": 0.0,
+        "couleur": "",
+        "intention": ""
+      }
+    ]
+  }
 }
