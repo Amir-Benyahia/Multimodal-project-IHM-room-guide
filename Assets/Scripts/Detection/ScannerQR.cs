@@ -23,7 +23,6 @@ public class ScannerQR : MonoBehaviour
 
             if (dialogue != null)
                 dialogue.ObjetDetecte(id);
-            Debug.Log("QR Code reconnu : " + id);
         }
         else
         {

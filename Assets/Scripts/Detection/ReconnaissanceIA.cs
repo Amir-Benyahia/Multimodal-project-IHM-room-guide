@@ -50,8 +50,6 @@ public class ReconnaissanceIA : MonoBehaviour
 
         if (texteDetection != null)
             texteDetection.text = "Recherche du projecteur...";
-
-        Debug.Log("Modele Projecteur Epson charge !");
     }
 
     public void AnalyserImage(float[] pixels)

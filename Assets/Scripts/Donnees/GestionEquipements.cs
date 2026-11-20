@@ -20,22 +20,6 @@ public class GestionEquipements : MonoBehaviour
             JsonUtility.FromJson<ListeEquipements>(
                 fichierJSON.text
             );
-
-        Debug.Log("JSON chargé avec succès !");
-
-        // Test de recherche
-        Equipement objet = Rechercher("CASQUE_VR_01");
-
-        if (objet != null)
-        {
-            Debug.Log("Nom : " + objet.nom);
-            Debug.Log("Description : " + objet.description);
-            Debug.Log("Utilisation : " + objet.utilisation);
-        }
-        else
-        {
-            Debug.LogError("Équipement introuvable !");
-        }
     }
 
     // La salle (reponses et reperes du mur), ou null si absente du JSON

@@ -19,8 +19,6 @@ public class DetectionObjet : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Detection d'objets activee !");
-
         if (cameraAR == null || reconnaissanceIA == null)
         {
             Debug.LogError("Camera AR ou IA non connectee !");

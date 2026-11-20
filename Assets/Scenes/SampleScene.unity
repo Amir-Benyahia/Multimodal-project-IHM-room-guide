@@ -2871,7 +2871,6 @@ GameObject:
   - component: {fileID: 2064832819}
   - component: {fileID: 2064832818}
   - component: {fileID: 2064832821}
-  - component: {fileID: 2064832822}
   - component: {fileID: 2064832823}
   - component: {fileID: 2064832824}
   m_Layer: 0
@@ -2923,18 +2922,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScannerQR
   gestion: {fileID: 2064832818}
   affichage: {fileID: 117994675}
---- !u!114 &2064832822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064832817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a51ca43e1296fc14aad7cb4e4d81342e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Test
 --- !u!114 &2064832823
 MonoBehaviour:
   m_ObjectHideFlags: 0
