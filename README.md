@@ -4,6 +4,8 @@ Application mobile de réalité augmentée (Unity, iOS et Android) qui aide un u
 
 Projet du cours TIM (interaction multimodale), Master 2, Université Côte d'Azur, 2026.
 
+Diapositives de la soutenance : [Docs/Soutenance_Salle_IHM.pdf](Docs/Soutenance_Salle_IHM.pdf)
+
 **Équipe et répartition :**
 - Détection du projecteur : BACHA Hiba
 - Reconnaissance vocale : BENYAHIA Amir
